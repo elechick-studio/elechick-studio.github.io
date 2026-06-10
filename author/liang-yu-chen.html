@@ -2,14 +2,12 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Posts by Liang-Yu Chen | light655</title>
+  <title>Posts by Liang-Yu Chen | 電雞電子工作室</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="/static/m-dark.css" />
-  <link rel="next" href="/author/liang-yu-chen2.html" />
-  <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="light655" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#cb4b16" />
-  <meta property="og:site_name" content="light655" />
+  <meta property="og:site_name" content="電雞電子工作室" />
   <meta property="og:title" content="Liang-Yu Chen" />
   <meta name="twitter:title" content="Liang-Yu Chen" />
   <meta property="og:url" content="/author/liang-yu-chen.html" />
@@ -20,7 +18,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m">light655</a>
+      <a href="/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m">電雞電子工作室</a>
       <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
@@ -45,29 +43,6 @@
       </div>
       <article>
         <header>
-          <h1><a href="/Blog/rp_mcu_timer.html" rel="bookmark" title="Permalink to How to execute code regularly with timer on Raspberry Pi Pico?">
-            <time class="m-date" datetime="2026-04-05T00:00:00+08:00">
-              Apr <span class="m-date-day">05</span> 2026
-            </time>
-            How to execute code regularly with timer on Raspberry Pi Pico?
-          </a></h1>
-              <p>In MCU projects, we often need to execute a piece of code regularly.
-          For example, reading a sensor every few milliseconds or toggling an LED every second.
-          Naively, we will use delay to achieve this effect.
-          When there are multiple things going on the project with different periods, it becomes hard to manage with delay.
-          Furthermore, delay blocks the CPU and we cannot perform other tasks during the delay.
-          This is where timer comes in handy.
-          We can achieve precise timing without blocking the CPU.
-          In this blog, I will go through the basics of using pico_time API on the Raspberry Pi Pico to execute code regularly.</p>
-              <img alt="" class="m-image" src= "/data/rp_mcu_timer/thumbnail.webp"/>
-        </header>
-        <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-04-05T00:00:00+08:00">Sun 05 April 2026</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-04-05T00:00:00+08:00">Sun 05 April 2026</time></span></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article>
-        <header>
           <h1><a href="/Product/gauss_meter.html" rel="bookmark" title="Permalink to USB 3D Gauss Meter">
             <time class="m-date" datetime="2026-03-26T00:00:00+08:00">
               Mar <span class="m-date-day">26</span> 2026
@@ -79,106 +54,6 @@
         </header>
         <footer>
           <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-03-26T00:00:00+08:00">Thu 26 March 2026</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-03-28T00:00:00+08:00">Sat 28 March 2026</time></span> Tags: <a href="/tag/hall-sensor.html">Hall Sensor</a>, <a href="/tag/tmag5170.html">TMAG5170</a>, <a href="/tag/gauss-meter.html">Gauss Meter</a>.</p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article>
-        <header>
-          <h1><a href="/Blog/74hc595_testing_2.html" rel="bookmark" title="Permalink to How much current can the 74HC595 shift register provide?">
-            <time class="m-date" datetime="2026-02-28T00:00:00+08:00">
-              Feb <span class="m-date-day">28</span> 2026
-            </time>
-            How much current can the 74HC595 shift register provide?
-          </a></h1>
-              <p>The 74HC595 is one of the most common logic ICs out there, especially in the Arduino community.
-          It is often utilised to drive multiple LEDs with serial input.
-          A project of mine used it drive multiple LEDs.
-          I found that the LED brightness reduces when too many of them are on.
-          This made me wonder how much current can this IC actually supply.
-          I measured the IV curve of the output of the 74HC595 last year.
-          But I found that the measurement was kind of flawed.
-          Therefore, I measured it again in this blog and documented the details in my setup.</p>
-              <img alt="" class="m-image" src= "/data/74hc595-testing-2/full_iv.webp"/>
-        </header>
-        <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-02-28T00:00:00+08:00">Sat 28 February 2026</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-03-06T00:00:00+08:00">Fri 06 March 2026</time></span></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article>
-        <header>
-          <h1><a href="/Blog/unbrick_stm32.html" rel="bookmark" title="Permalink to How to un-brick an STM32?">
-            <time class="m-date" datetime="2026-02-10T00:00:00+08:00">
-              Feb <span class="m-date-day">10</span> 2026
-            </time>
-            How to un-brick an STM32?
-          </a></h1>
-              <p>I accidentally bricked my STM32 when uploading compiled binaries to it.
-          I used a Raspberry Pi Pico 2 and the official CMSIS-DAP firmware with OpenOCD.
-          After some messing around, I found the way to un-brick it and how to prevent bricking.</p>
-              <img alt="" class="m-image" src= "/data/unbrick_stm32/error.webp"/>
-        </header>
-        <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-02-10T00:00:00+08:00">Tue 10 February 2026</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-02-10T00:00:00+08:00">Tue 10 February 2026</time></span> Tags: <a href="/tag/stm32.html">STM32</a>, <a href="/tag/swd.html">SWD</a>, <a href="/tag/openocd.html">OpenOCD</a>.</p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article>
-        <header>
-          <h1><a href="/Blog/stm32_timer_stepper.html" rel="bookmark" title="Permalink to Driving a stepper motor with STM32's timer peripheral.">
-            <time class="m-date" datetime="2026-01-31T00:00:00+08:00">
-              Jan <span class="m-date-day">31</span> 2026
-            </time>
-            Driving a stepper motor with STM32's timer peripheral.
-          </a></h1>
-              <p>I was working on controlling some stepper motors on a robot.
-          I wanted to control them with an STM32.
-          The STM32 is controlled by a Raspberry Pi 5 with SPI.
-          To generate the periodic signal for the stepper driver, I used the timer peripheral on the STM32.
-          I this blog, I will go through the basics of the timer peripheral and how I set it up for this usage.</p>
-              <img alt="" class="m-image" src= "/data/stm32_timer_stepper/timer_our.webp"/>
-        </header>
-        <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-01-31T00:00:00+08:00">Sat 31 January 2026</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-02-03T00:00:00+08:00">Tue 03 February 2026</time></span> Tags: <a href="/tag/stm32.html">STM32</a>, <a href="/tag/timer.html">Timer</a>, <a href="/tag/stepper-motor.html">Stepper Motor</a>, <a href="/tag/drv8825.html">DRV8825</a>.</p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article>
-        <header>
-          <h1><a href="/Blog/ST7735_bug.html" rel="bookmark" title="Permalink to STM32, Arduino environment, ST7735 screen. Bugs and workarounds.">
-            <time class="m-date" datetime="2026-01-17T00:00:00+08:00">
-              Jan <span class="m-date-day">17</span> 2026
-            </time>
-            STM32, Arduino environment, ST7735 screen. Bugs and workarounds.
-          </a></h1>
-              <p>I was working with the ST7735 screen in a project at <a href="https://nthuee.org/index.html">NTHUEE 822 Maker Space</a>.
-          We were controlling the screen with an STM32F103C8T6 Blue Pill and <a href="https://github.com/adafruit/Adafruit-ST7735-Library">Adafruit's ST7735 &amp; ST7789 library</a>.
-          And we ran into a very interesting bug, which was caused by the value of &quot;pins&quot; in the <a href="https://github.com/stm32duino/Arduino_Core_STM32">STM32 Arduino core</a>.
-          In this article, I will explain the cause of the bug and the workaround for current version of the libraries.</p>
-              <img alt="" class="m-image" src= "/data/ST7735_bug/working_1.webp"/>
-        </header>
-        <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-01-17T00:00:00+08:00">Sat 17 January 2026</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-01-17T00:00:00+08:00">Sat 17 January 2026</time></span> Tags: <a href="/tag/st7735.html">ST7735</a>, <a href="/tag/stm32.html">STM32</a>, <a href="/tag/arduino.html">Arduino</a>.</p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article>
-        <header>
-          <h1><a href="/Blog/74hc595_testing.html" rel="bookmark" title="Permalink to Testing the driving capability of the 74HC595 shift register">
-            <time class="m-date" datetime="2025-05-13T00:00:00+08:00">
-              May <span class="m-date-day">13</span> 2025
-            </time>
-            Testing the driving capability of the 74HC595 shift register
-          </a></h1>
-              <p>The 74HC595 shift register is one of the most popular 74 series IC these days.
-          It is often used to convert serial data into parallel and drive LEDs.
-          A project of mine used it drive multiple LEDs.
-          This made me wonder how much current can this IC actually supply.
-          Therefore, I did some testing on the driving capability of the 74HC595 shift register.</p>
-              <img alt="" class="m-image" src= "/data/74hc595-testing/74hc595-testing-breadboard.jpg"/>
-        </header>
-        <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2025-05-13T00:00:00+08:00">Tue 13 May 2025</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-01-12T00:00:00+08:00">Mon 12 January 2026</time></span></p>
         </footer>
         <div class="m-clearfix-l"></div>
       </article>
@@ -219,50 +94,89 @@
       </article>
       <article>
         <header>
-          <h1><a href="/Blog/vscode-fractional-scaling.html" rel="bookmark" title="Permalink to Fixing blurry VSCode, Microsoft Edge on Ubuntu with fractional scaling">
-            <time class="m-date" datetime="2025-02-10T00:00:00+08:00">
-              Feb <span class="m-date-day">10</span> 2025
+          <h1><a href="/Product/NVC_r2.html" rel="bookmark" title="Permalink to Split Rail Breadboard Power Supply">
+            <time class="m-date" datetime="2024-02-13T00:00:00+08:00">
+              Feb <span class="m-date-day">13</span> 2024
             </time>
-            Fixing blurry VSCode, Microsoft Edge on Ubuntu with fractional scaling
+            Split Rail Breadboard Power Supply
           </a></h1>
-              <p>New laptops with 2880x1800 OLED screens look great.
-          However, I prefer setting the fractional scaling to 175% to fit more content on the screen.
-          Currently on Ubuntu(22.04 &amp; 24.04 in my case), the fractional scaling process cause some applications to become blurry.
-          In this article, I will show you the workarounds to get VSCode and Microsoft Edge look sharp again.
-          However, there are still other apps that I unfortunately don't have a fix(Kicad, Rawtherapee to name a few).
-          Also, I'll show you how to modify the laucher .desktop file so that the flags we added later will be applied when you click the icon in the laucher.</p>
+              <p>In the past, I always avoided projects that require split rail power because of the extra effort needed to get that negative rail.
+          To solve this problem, I designed a simple +5V to -5V switching converter PCB to provide a negative rail from USB.
+          Once connected to power via USB Type-C, the right power rail of the breadboard will be +5V and the left power rail will be -5V.</p>
+              <img alt="" class="m-image" src= "/data/NVC_R2/BD5_6192.jpg"/>
         </header>
         <footer>
-          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2025-02-10T00:00:00+08:00">Mon 10 February 2025</time> in <a href="/Blog/">Blog</a>. <span class="m-label m-success">updated <time datetime="2026-01-12T00:00:00+08:00">Mon 12 January 2026</time></span></p>
+          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2024-02-13T00:00:00+08:00">Tue 13 February 2024</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-01-15T00:00:00+08:00">Thu 15 January 2026</time></span> Tags: <a href="/tag/power-supply.html">Power Supply</a>, <a href="/tag/breadboard.html">Breadboard</a>.</p>
         </footer>
         <div class="m-clearfix-l"></div>
       </article>
-      <div class="m-article-pagination">page 1 | <a href="/author/liang-yu-chen2.html">older articles &raquo;</a></div>
+      <article>
+        <header>
+          <h1><a href="/Product/PMOD_flash.html" rel="bookmark" title="Permalink to PMOD 16MB Flash Module">
+            <time class="m-date" datetime="2023-10-11T00:00:00+08:00">
+              Oct <span class="m-date-day">11</span> 2023
+            </time>
+            PMOD 16MB Flash Module
+          </a></h1>
+              <p>A 16MB Winbond W25Q128JVSIQ flash module with PMOD interface that can be easily connected to an FPGA.</p>
+              <img alt="" class="m-image" src= "/data/PMOD_flash/PMOD_flash_cropped.jpg"/>
+        </header>
+        <footer>
+          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2023-10-11T00:00:00+08:00">Wed 11 October 2023</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-01-16T00:00:00+08:00">Fri 16 January 2026</time></span> Tags: <a href="/tag/flash.html">Flash</a>, <a href="/tag/pmod.html">PMOD</a>, <a href="/tag/fpga.html">FPGA</a>, <a href="/tag/breadboard.html">Breadboard</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="/Product/PDC.html" rel="bookmark" title="Permalink to Pico Debug Carrier">
+            <time class="m-date" datetime="2023-08-23T00:00:00+08:00">
+              Aug <span class="m-date-day">23</span> 2023
+            </time>
+            Pico Debug Carrier
+          </a></h1>
+              <p>The RP2040 chip designed by Raspberry Pi has many features including the ability to emulate a SWD interface and act as the debugger for other ARM microcontrollers.
+          Connecting two Picos together creates a mess of wires, so I came up with the idea of designing an RP2040-based board to take the job of the second of the second Pico and get rid of the messy wiring.</p>
+              <img alt="" class="m-image" src= "/data/PDC/PDC1.jpg"/>
+        </header>
+        <footer>
+          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2023-08-23T00:00:00+08:00">Wed 23 August 2023</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-01-16T00:00:00+08:00">Fri 16 January 2026</time></span> Tags: <a href="/tag/serial-wire-debug.html">Serial Wire Debug</a>, <a href="/tag/raspberry-pi-pico.html">Raspberry Pi Pico</a>, <a href="/tag/rp2040.html">RP2040</a>, <a href="/tag/rp2350.html">RP2350</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="/Product/L-01.html" rel="bookmark" title="Permalink to 8-bit register with LEDs based on 74HC273">
+            <time class="m-date" datetime="2023-08-01T00:00:00+08:00">
+              Aug <span class="m-date-day">01</span> 2023
+            </time>
+            8-bit register with LEDs based on 74HC273
+          </a></h1>
+              <p>The 8-bit register breakout board shrinks the 74HC273 D-flip-flop IC and LEDs onto a PCB only a little larger than a DIP-20 package.
+          All pins on the 74HC273 is broken out and a pull-up resistor is added to the clear pin to prevent the device resetting itself.</p>
+              <img alt="" class="m-image" src= "/data/L-01/L-01.jpg"/>
+        </header>
+        <footer>
+          <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2023-08-01T00:00:00+08:00">Tue 01 August 2023</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-01-16T00:00:00+08:00">Fri 16 January 2026</time></span> Tags: <a href="/tag/8-bit.html">8-bit</a>, <a href="/tag/register.html">Register</a>, <a href="/tag/breadboard.html">Breadboard</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
     </div>
 <!--     <nav class="m-navpanel m-col-m-2">
       <h3>Categories</h3>
       <ol class="m-block-bar-m">
-        <li><a href="/Blog/">Blog</a></li>
         <li><a href="/Product/">Product</a></li>
       </ol>
       <h3>Tag cloud</h3>
       <ul class="m-tagcloud">
         <li class="m-tag-2"><a href="/tag/8-bit.html">8-bit</a></li>
-        <li class="m-tag-2"><a href="/tag/adc.html">ADC</a></li>
-        <li class="m-tag-2"><a href="/tag/ads1115.html">ADS1115</a></li>
-        <li class="m-tag-3"><a href="/tag/arduino.html">Arduino</a></li>
         <li class="m-tag-5"><a href="/tag/breadboard.html">Breadboard</a></li>
         <li class="m-tag-2"><a href="/tag/display.html">Display</a></li>
-        <li class="m-tag-2"><a href="/tag/drv8825.html">DRV8825</a></li>
         <li class="m-tag-2"><a href="/tag/efuse.html">eFuse</a></li>
         <li class="m-tag-2"><a href="/tag/flash.html">Flash</a></li>
         <li class="m-tag-2"><a href="/tag/fpga.html">FPGA</a></li>
         <li class="m-tag-2"><a href="/tag/gauss-meter.html">Gauss Meter</a></li>
-        <li class="m-tag-2"><a href="/tag/hall-effect.html">Hall Effect</a></li>
         <li class="m-tag-2"><a href="/tag/hall-sensor.html">Hall Sensor</a></li>
         <li class="m-tag-2"><a href="/tag/hexadecimal.html">Hexadecimal</a></li>
-        <li class="m-tag-2"><a href="/tag/kicad.html">Kicad</a></li>
-        <li class="m-tag-2"><a href="/tag/openocd.html">OpenOCD</a></li>
         <li class="m-tag-2"><a href="/tag/overcurrent-protection.html">Overcurrent Protection</a></li>
         <li class="m-tag-2"><a href="/tag/pmod.html">PMOD</a></li>
         <li class="m-tag-2"><a href="/tag/power-supply.html">Power Supply</a></li>
@@ -270,16 +184,8 @@
         <li class="m-tag-2"><a href="/tag/register.html">Register</a></li>
         <li class="m-tag-2"><a href="/tag/rp2040.html">RP2040</a></li>
         <li class="m-tag-2"><a href="/tag/rp2350.html">RP2350</a></li>
-        <li class="m-tag-2"><a href="/tag/sensor.html">Sensor</a></li>
         <li class="m-tag-2"><a href="/tag/serial-wire-debug.html">Serial Wire Debug</a></li>
-        <li class="m-tag-2"><a href="/tag/simulation.html">Simulation</a></li>
-        <li class="m-tag-2"><a href="/tag/spice.html">SPICE</a></li>
-        <li class="m-tag-2"><a href="/tag/st7735.html">ST7735</a></li>
-        <li class="m-tag-2"><a href="/tag/stepper-motor.html">Stepper Motor</a></li>
-        <li class="m-tag-4"><a href="/tag/stm32.html">STM32</a></li>
-        <li class="m-tag-2"><a href="/tag/swd.html">SWD</a></li>
-        <li class="m-tag-2"><a href="/tag/timer.html">Timer</a></li>
-        <li class="m-tag-3"><a href="/tag/tmag5170.html">TMAG5170</a></li>
+        <li class="m-tag-2"><a href="/tag/tmag5170.html">TMAG5170</a></li>
       </ul>
     </nav>
   </div>
@@ -290,7 +196,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>light655. Powered by <a href="https://getpelican.com">Pelican</a> and <a href="https://mcss.mosra.cz">m.css</a>.</p>
+        <p>電雞電子工作室. Powered by <a href="https://getpelican.com">Pelican</a> and <a href="https://mcss.mosra.cz">m.css</a>.</p>
       </div>
     </div>
   </div>
