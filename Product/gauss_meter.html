@@ -2,18 +2,20 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>USB 3D Gauss Meter | 電雞電子工作室</title>
+  <title>USB 3D 磁力計 | 電雞電子工作室</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&amp;display=swap" />
   <link rel="stylesheet" href="/static/m-dark.css" />
+  <link rel="stylesheet" href="/data/custom.css" />
   <link rel="canonical" href="/Product/gauss_meter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#cb4b16" />
   <meta property="og:site_name" content="電雞電子工作室" />
-  <meta property="og:title" content="USB 3D Gauss Meter" />
-  <meta name="twitter:title" content="USB 3D Gauss Meter" />
+  <meta property="og:title" content="USB 3D 磁力計" />
+  <meta name="twitter:title" content="USB 3D 磁力計" />
   <meta property="og:url" content="/Product/gauss_meter.html" />
-  <meta property="og:description" content="A USB 3D-Gauss Meter based on Texas Instrument&#39;s TMAG5170 Hall Sensor." />
-  <meta name="twitter:description" content="A USB 3D-Gauss Meter based on Texas Instrument&#39;s TMAG5170 Hall Sensor." />
+  <meta property="og:description" content="可以和電腦連線並直接將測量結果儲存為 CSV 表格的 3D 磁力計。" />
+  <meta name="twitter:description" content="可以和電腦連線並直接將測量結果儲存為 CSV 表格的 3D 磁力計。" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="article" />
 </head>
@@ -42,83 +44,65 @@
   <div class="m-row">
     <article class="m-col-m-10 m-nopadb">
       <header>
-        <h1><a href="/Product/gauss_meter.html" rel="bookmark" title="Permalink to USB 3D Gauss Meter">
+        <h1><a href="/Product/gauss_meter.html" rel="bookmark" title="Permalink to USB 3D 磁力計">
           <time class="m-date" datetime="2026-03-26T00:00:00+08:00">
             Mar <span class="m-date-day">26</span> 2026
           </time>
-          USB 3D Gauss Meter
+          USB 3D 磁力計
         </a></h1>
       </header>
       <div class="m-clearfix-l"></div>
 <!-- content -->
-<p>This project is a USB 3D-Gauss Meter based on Texas Instrument's TMAG5170 Hall Sensor.
-The Gauss Meter is powered by an STM32, which sends the measured data through USB.
-There is a Python GUI client to show and log the measurements on your computer screen.</p>
+<p>本產品是一個可以透過 USB 和電腦連線，並直接將測量結果儲存為 CSV 表格（可由 Excel 直接開啟）的 3D 磁力計。
+本產品是基於德州儀器 TMAG5170 霍爾磁力感測 IC，支援 ±300mT/±3000高斯的 3D 測量範圍。
+用於連線的電腦端軟體可以直接由 <a href="https://github.com/light655/USB-3D-Gauss-Meter/releases/tag/v2.0.0">Github</a> 下載，支援 Windows / MacOS / Linux 等作業系統。
+我們的連線軟體最高支援每秒紀錄 2500 筆 3D 測量資料。</p>
 <img class="m-image" src="/data/gauss_meter/cover.webp" />
-<section id="python-gui-client-setup">
-<h2>Python GUI client setup</h2>
-<p>First of all, you can download all the design files and the STM32 firmware and Python GUI client from <a href="https://github.com/light655/USB-3D-Gauss-Meter/">Github</a>.</p>
-<pre class="m-code">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/light655/USB-3D-Gauss-Meter.git</pre>
-<p>The Python GUI client requires Pyside6 and pyserial packages to run.
-You can install them with pip.</p>
-<pre class="m-code">pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>python-client/requirements.txt</pre>
-<p>Then, you can run the Python script to start the GUI client.
-There are currently two versions of firmware and Python GUI client.
-Please use version two.</p>
-<pre class="m-code">python3<span class="w"> </span>python-client/gauss-meter-v2.py</pre>
+<p>作者在高中時是 <a href="https://typt.phy.ntnu.edu.tw/">徐有庠盃-臺灣青年學生物理辯論競賽(TYPT)</a> 選手。
+當時在高中做實驗時，學校的磁力計因為單價高無法借出實驗室，且測量速度與無法將測量結果紀錄至電腦，造成實驗上許多不便。
+因此，作者便開始研究使用霍爾感測器 IC，起初撰寫了 <a href="https://github.com/light655/arduino-tmag5170">arduino-tmag5170</a> 與 <a href="https://github.com/light655/pico-tmag5170">pico-tmag5170</a> 函式庫供學弟妹使用。
+在大學時，則利用 STM32 將整個測量電路整合為一個手持儀器，並且開發了用於連線的電腦端軟體，讓沒有程式設計背景的高中生也能簡單上手。</p>
+<section id="section-1">
+<h2>電腦端軟體安裝</h2>
+<p>如果您是使用 Windows 作業系統，我們提供預先編譯好的執行檔，不需要安裝 Python，請參考 <a href="https://www.youtube.com/watch?v=kCA1quN0qew">這個影片</a> 的安裝步驟。
+如果您是使用 MacOS / Linux 或是想要在 Windows 上以 Python 環境執行，請參考以下的步驟與指令。</p>
+<p>首先，電腦端軟體的 Python 檔案可以由 <a href="https://github.com/light655/USB-3D-Gauss-Meter/releases/tag/v2.0.0">Github</a> 下載。
+電腦端軟體需要 Pyside6 與 pyserial 套件才可以執行，建議可以使用 Python 虛擬環境與 pip 安裝。
+請在終端機中執行以下三個指令。</p>
+<pre class="m-code">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>gm_venv
+.<span class="w"> </span>gm_venv/bin/activate
+pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>python-client/requirements.txt</pre>
+<p>等待套件安裝完畢後，即可利用以下指令開始執行 USB 3D 高斯計的電腦端軟體。</p>
+<pre class="m-code">python3<span class="w"> </span>gauss-meter-v2.py</pre>
 </section>
-<section id="python-gui-client-usage">
-<h2>Python GUI client usage</h2>
-<p>First, select the serial device.
-The USB 3D Gauss Meter should show up as STM32 Virtual ComPort.
-Next, you can select the measurement range.
-There are three options: 75mT, 150mT and 300mT.</p>
+<section id="section-2">
+<h2>電腦端軟體使用說明</h2>
+<p>首先，請選擇序列埠裝置，本產品會顯示為 STM32 Virtual ComPort。
+接下來，您可以選擇測量範圍：±75mT、±150mT 或 ±300mT。</p>
 <img class="m-image" src="/data/gauss_meter/python_client.webp" />
-<p>If you want to log to measured data, please check the &quot;Save results&quot; checkbox and select a file to save to.
-By default, logging will stop after 1000 samples are taken.
-If you want longer logging length, you can enter the number of samples that you wish to log.
-There is no limitation to the number of logged samples, as long as your hard drive can fit the data.
-Next, select a sampling rate.
-In the current version, the maximum logging sampling rate is 2500 samples per second.</p>
+<p>本產品有兩個運作模式：即時顯示模式、紀錄儲存模式。
+在即時顯示模式下，USB 3D 磁力計所測量到的磁力資料會即時顯示在電腦螢幕上。
+在紀錄儲存模式下，USB 3D 磁力計所測量到的磁力資料會紀錄至 CSV 表格中。</p>
+<p>紀錄儲存模式可以透過將 □ Save results 打勾開啟，並請選擇存檔的檔案名稱。
+軟體預設會儲存 1000 筆 3D 測量資料，如果需要紀錄更多筆測量資料，可以在文字框中打入欲儲存的筆數。
+接下來，請選擇紀錄的速度，目前支援的最高取樣頻率為每秒 2500 筆 3D 測量資料。</p>
+<p>按下 Start 按鈕即可開始測量。
+測量會在達到目標的測量數量之後自動停下，或是可以按 Reset 按鈕強制停止。</p>
 <img class="m-image" src="/data/gauss_meter/logged_data.webp" />
-<p>In logging mode, the program will produce a CSV file.
-There are four columns in the CSV file: time and magnetic field on the three axes.
-The units are microseconds (us) and millitesla (mT) for time and magnetic field, respectively.</p>
+<p>達到目標的測量資料數量之後，軟體會產生一個 CSV 檔案，裡面會有四列資料。
+第一列為時間軸，單位是微秒 (us)。
+後三列為三軸的磁通量密度，單位是毫特斯拉 (mT)。</p>
 <aside class="m-note m-danger">
-<h3>Warning</h3>
-<p>The selected sampling rate is only an estimation.
-Slight difference in sampling rate is expected due to device variation of the TMAG5170 Hall sensor.
-Please use the timestamp provided by the logging firmware for more precise timing.</p>
+<h3>注意</h3>
+<p>顯示在選單中的取樣頻率（例如 2500 ksps）僅為估計值，可能會因為 IC 公差而有誤差。
+因此，請使用 CSV 檔案中存下的時間軸，以獲得更精確的時間資訊。</p>
 </aside>
-<p>To start logging or just displaying measured magnetic field on the screen, click the &quot;Start&quot; button.
-The program will stop logging when the set number of measurements is reached.
-In display mode, the TMAG5170 is set to 32x averaging mode and a measurement is taken around every 0.5 seconds.
-To force stop and change settings, you can click the &quot;Reset&quot; button.</p>
 </section>
-<section id="stm32-firmware">
-<h2>STM32 firmware</h2>
-<p>There are two versions of firmware currently.
-Please use version two firmware with version two Python client.
-The USB 3D Gauss Meter is loaded with the version two firmware when shipped.
-You need not flash it yourself.</p>
-<p>However, if you decide to hack around with the firmware (you are very welcomed to do so), you can upload it via the SWD headers.
-You can use any SWD compatible debug probes, such as Raspberry Pi Picoprobe to program the STM32.
-The SWD headers are arranged in a zigzag footprint.
-This way, you can insert pin headers without soldering.</p>
-<figure class="m-figure">
-<img src="/data/gauss_meter/upload_setup.webp" />
-<figcaption>The connection for uploading firmware to the STM32 on the USB 3D Gauss Meter.<div class="m-figure-description">
-In my setup, I used a Raspberry Pi Pico 2 with the Picoprobe firmware to upload the compiled binaries to the STM32.
-I power the USB 3D Gauss Meter from the USB type C port, so the 3.3V pin the debug headers are not connected.</div>
-</figcaption>
-</figure>
-<p>The current firmware cannot run at the maximum speed of the TMAG5170 Hall effect sensor.
-I suspect this is due to the use of C++ in the firmware.</p>
-</section>
-<section id="links">
-<h2>Links</h2>
+<section id="section-3">
+<h2>連結</h2>
 <ul>
 <li><a href="https://github.com/light655/USB-3D-Gauss-Meter/">Github repository containing the hardware design, STM32 firmware and Python client.</a></li>
+<li><a href="https://www.ti.com/lit/ds/symlink/tmag5170.pdf">Texas Instruments TMAG5170 Datasheet</a></li>
 </ul>
 </section>
 <!-- /content -->

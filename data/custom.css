@@ -1,0 +1,9 @@
+:root {
+  --font: 'Noto Sans TC', sans-serif;
+}
+
+article > header h1,
+article > header h1 a {
+  display: flex;
+  align-items: center;
+}
