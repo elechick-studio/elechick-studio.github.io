@@ -2,20 +2,20 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Pico Debug Carrier | 電雞電子工作室</title>
+  <title>INA181 雙向類比電流感測模組 | 電雞電子工作室</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&amp;display=swap" />
   <link rel="stylesheet" href="/static/m-dark.css" />
   <link rel="stylesheet" href="/data/custom.css" />
-  <link rel="canonical" href="/Product/PDC.html" />
+  <link rel="canonical" href="/Product/ina181_breakout.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#cb4b16" />
   <meta property="og:site_name" content="電雞電子工作室" />
-  <meta property="og:title" content="Pico Debug Carrier" />
-  <meta name="twitter:title" content="Pico Debug Carrier" />
-  <meta property="og:url" content="/Product/PDC.html" />
-  <meta property="og:description" content="The RP2040 chip designed by Raspberry Pi has many features including the ability to emulate a SWD interface and act as the debugger for other ARM microcontrollers. Connecting two Picos together creates a mess of wires, so I came up with the idea of designing an RP2040-based board to take the job of the second of the second Pico and get rid of the messy wiring." />
-  <meta name="twitter:description" content="The RP2040 chip designed by Raspberry Pi has many features including the ability to emulate a SWD interface and act as the debugger for other ARM microcontrollers. Connecting two Picos together creates a mess of wires, so I came up with the idea of designing an RP2040-based board to take the job of the second of the second Pico and get rid of the messy wiring." />
+  <meta property="og:title" content="INA181 雙向類比電流感測模組" />
+  <meta name="twitter:title" content="INA181 雙向類比電流感測模組" />
+  <meta property="og:url" content="/Product/ina181_breakout.html" />
+  <meta property="og:description" content="用來將電流訊號轉換為 ADC 能直接讀取的電壓訊號的雙向類比電流感測模組。" />
+  <meta name="twitter:description" content="用來將電流訊號轉換為 ADC 能直接讀取的電壓訊號的雙向類比電流感測模組。" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="article" />
 </head>
@@ -44,45 +44,48 @@
   <div class="m-row">
     <article class="m-col-m-10 m-nopadb">
       <header>
-        <h1><a href="/Product/PDC.html" rel="bookmark" title="Permalink to Pico Debug Carrier">
-          Pico Debug Carrier
+        <h1><a href="/Product/ina181_breakout.html" rel="bookmark" title="Permalink to INA181 雙向類比電流感測模組">
+          INA181 雙向類比電流感測模組
         </a></h1>
-        <p>The RP2040 chip designed by Raspberry Pi has many features including the ability to emulate a SWD interface and act as the debugger for other ARM microcontrollers.
-        Connecting two Picos together creates a mess of wires, so I came up with the idea of designing an RP2040-based board to take the job of the second of the second Pico and get rid of the messy wiring.</p>
+        <p>用來將電流訊號轉換為 ADC 能直接讀取的電壓訊號的雙向類比電流感測模組。</p>
       </header>
       <div class="m-clearfix-l"></div>
 <!-- content -->
-<img class="m-image" src="/data/PDC/PDC1.jpg" />
-<p>With the Pico Debug Carrier, we can solder on the target Pico and use the Picoprobe firmware written by Raspberry Pi to debug the target Pico.
-All of the circuitry is squeeze onto a PCB the same size as an Arduino Uno and accessed by an USB type C port.
-Although the target Pico is soldered onto the PCB, the Pico Debug Carrier still provides full access of the pins on the Pico through pin headers.</p>
-<p>The Pico Debug Carrier is designed to be a 2-in-1 development kit.
-Since debugging the Pico only requires 4 GPIO pins, the rest of the GPIOs are broken out, so that this board can also be used as a normal development board.
-The PCB is designed to match the form factor of the Arduino Uno, and the position of the special pins(I2C, UART) are rearranged to be at same place as the Arduino Uno.</p>
-<p>There are a few improvements in terms of development board to the Pi Pico.</p>
+<img class="m-image" src="/data/ina181_breakout/ina181_pcb.webp" />
+<p>本模組是基於德州儀器 INA181A1 電流感測放大器所開發之雙向類比電流感測模組。
+本模組可將電流訊號轉換電壓訊號，提供微控制器的 ADC 讀取。
+本模組可測量雙向電流，並且將輸出電壓範圍置中於 1/2 VDD。
+這樣一來，負向電流所產生的輸出電壓會介於 0V ~ 1/2 VDD 之間，而非負的輸出電壓，方便微控制器 ADC 讀取。</p>
+<section id="section-1">
+<h2>特點</h2>
 <ul>
-<li>A reset button is added, we no longer need to short the RUN pin to ground with wires to reset the microcontroller.</li>
-<li>There is 16MB of flash. Although 2MB is plenty for the Picoprobe firmware, a larger flash chip is used just in case.</li>
-<li>There is a USB-C connector. No more up-side-down USB connectors!</li>
-<li>There are 2 user LEDs connected to GPIOs 24 and 25.</li>
+<li>電流測量腳位共模電壓 -0.2V ~ 26V</li>
+<li>完全類比操作，反應較 INA219 等數位模組快</li>
+<li>輸出置中於 1/2 VDD</li>
+<li>雙向電流測量能力</li>
+<li>模組採 2.7V ~ 5.5V 供電</li>
 </ul>
-<img class="m-image" src="/data/PDC/PDC2.jpg" />
-<section id="downloads">
-<h2>Downloads</h2>
+<img class="m-image" src="/data/ina181_breakout/ina181_module.webp" />
+<p>本模組的電流測量範圍是由電流檢測電阻值與模組供電電壓決定。
+若是搭配 200mΩ 電流檢測電阻與 3.3V 供電電壓，電流測量範圍為 ±0.4A。
+如需更大的測量範圍，可以降低電流檢測電阻值。
+有關本模組更詳細之操作，請參閱 datasheet。</p>
+</section>
+<section id="section-2">
+<h2>下載</h2>
 <ul>
-<li><a href="/data/PDC/PDC_datasheet.pdf">Datasheet</a></li>
+<li><a href="/data/ina181_breakout/ina181_breakout.pdf">Datasheet</a></li>
 </ul>
 </section>
-<section id="links">
-<h2>Links</h2>
+<section id="section-3">
+<h2>連結</h2>
 <ul>
-<li><a href="https://www.tindie.com/products/light655/pico-debug-carrier/">Purchase on Tindie</a></li>
-<li><a href="https://www.youtube.com/watch?v=gfvopzxL4c0">Video tutorial on how to solder the targe Pico onto the Pico Debug Carrier</a></li>
+<li><a href="https://www.tindie.com/products/light655/tps25200-efuse-module/">Purchase on Tindie</a></li>
 </ul>
 </section>
 <!-- /content -->
       <footer>
-        <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2023-08-23T00:00:00+08:00">Wed 23 August 2023</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-01-16T00:00:00+08:00">Fri 16 January 2026</time></span> Tags: <a href="/tag/serial-wire-debug.html">Serial Wire Debug</a>, <a href="/tag/raspberry-pi-pico.html">Raspberry Pi Pico</a>, <a href="/tag/rp2040.html">RP2040</a>, <a href="/tag/rp2350.html">RP2350</a>.</p>
+        <p>Posted by <a href="/author/liang-yu-chen.html">Liang-Yu Chen</a> on <time datetime="2026-04-30T00:00:00+08:00">Thu 30 April 2026</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-07-20T00:00:00+08:00">Mon 20 July 2026</time></span> Tags: <a href="/tag/current-sense.html">Current Sense</a>, <a href="/tag/amplifier.html">Amplifier</a>, <a href="/tag/analog.html">Analog</a>.</p>
       </footer>
     </article>
 <!--     <nav class="m-navpanel m-col-m-2">
