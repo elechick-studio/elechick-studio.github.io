@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>邏輯閘示範板 | 電雞電子工作室</title>
+  <title>邏輯閘教學示範板 | 電雞電子工作室</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&amp;display=swap" />
   <link rel="stylesheet" href="/static/m-dark.css" />
@@ -11,11 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#cb4b16" />
   <meta property="og:site_name" content="電雞電子工作室" />
-  <meta property="og:title" content="邏輯閘示範板" />
-  <meta name="twitter:title" content="邏輯閘示範板" />
+  <meta property="og:title" content="邏輯閘教學示範板" />
+  <meta name="twitter:title" content="邏輯閘教學示範板" />
   <meta property="og:url" content="/Product/Logic_design.html" />
-  <meta property="og:description" content="專為高中生設計的邏輯閘教學示範板，利用簡單的接線演示五種邏輯閘。" />
-  <meta name="twitter:description" content="專為高中生設計的邏輯閘教學示範板，利用簡單的接線演示五種邏輯閘。" />
+  <meta property="og:description" content="專為高中生設計的邏輯閘教學示範板，利用簡單的接線演示五種邏輯閘(AND, OR, NAND, NOR, NOT)。" />
+  <meta name="twitter:description" content="專為高中生設計的邏輯閘教學示範板，利用簡單的接線演示五種邏輯閘(AND, OR, NAND, NOR, NOT)。" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="article" />
 </head>
@@ -44,34 +44,44 @@
   <div class="m-row">
     <article class="m-col-m-10 m-nopadb">
       <header>
-        <h1><a href="/Product/Logic_design.html" rel="bookmark" title="Permalink to 邏輯閘示範板">
-          邏輯閘示範板
+        <h1><a href="/Product/Logic_design.html" rel="bookmark" title="Permalink to 邏輯閘教學示範板">
+          邏輯閘教學示範板
         </a></h1>
-        <p>專為高中生設計的邏輯閘教學示範板，利用簡單的接線演示五種邏輯閘。</p>
+        <p>專為高中生設計的邏輯閘教學示範板，利用簡單的接線演示五種邏輯閘(AND, OR, NAND, NOR, NOT)。</p>
       </header>
       <div class="m-clearfix-l"></div>
 <!-- content -->
-<img class="m-image" src="/data/Logic_design/logicdesign_3dviewer.png" />
-<p>這是一份專為高中生設計的邏輯閘教學示範板。
-該示範板由六個 MOSFET 實作而成，包含 3 個 NMOS 與 3 個 PMOS，能夠組合出 5 種不同的邏輯閘。
-此外，展示板可連接 Arduino 作為輸入源，並透過 LED 燈直觀地呈現輸出的邏輯狀態。</p>
-<p>可參考接線範例或是產品規格書，透過連接數個杜邦線，組裝出NOT閘、NOR閘、NAND閘、OR閘、AND閘。其中NOT閘可由左方的PMOSA跟NMOSA實作出來，而NOR閘與NAND閘可由PMOSB、PMOSC、NMOSB、NMOSC實作出來。</p>
+<img class="m-image" src="/data/Logic_design/logicdesign_3dviewer.webp" />
+<p>本產品可用於示範邏輯閘的邏輯函數，以及如何使用金屬氧化物半導體場效應電晶體(MOSFET)實作邏輯閘。
+本產品有六個電晶體，包含三個 N-Channel MOSFET 與三個 P-Channel MOSFET。
+此外，還有一個 LED 可以即時顯示邏輯閘的輸出邏輯值。
+部份電晶體之間的接線已經於示範板上完成，學生只須自行完成剩餘的接線，便能組合出五種不同的邏輯閘。
+關於接線的詳細步驟，可以參考接線範例(中文)或是 <a href="/data/Logic_design/logicdesign.pdf">產品規格書</a> (英文)。</p>
+<p>本產品的六個電晶體分為兩組。
+左側的一組兩顆電晶體 (Group A) 已於示範板上組裝為 NOT 閘，其輸入為 A、輸出為 OA。
+Group A 可用於直接展示 NOT 閘之邏輯函數，或與右側的電晶體結合為 AND 閘或 OR 閘。
+右側的一組四顆電晶體 (Group BC) 已於示範板上完成部份接線，學生只須另行接妥三條連線，即可組裝出 NAND 閘與 NOR 閘。
+Group B 之輸出為 OBC。
+輸入 B 與輸入 C 分別於示範板上接至 Group BC 中的一對 N-P MOSFET。
+若要實作 AND 閘或 OR 閘，只須將 Group BC 接為 NAND 閘或 NOR 閘，再將輸出 OBC 接至 Group A 輸入 A，觀察輸入 B、C 與輸出 OA 的邏輯函數即可。</p>
+<img class="m-image" src="/data/Logic_design/logicdesign_schematic.webp" />
+<p>接妥 Group A、Group BC 中的連線後，可以將輸出 OA 或 OBC 接至 OUT，即可透過 LED 觀察輸出之邏輯值。</p>
 <section id="section-1">
 <h2>下載</h2>
 <ul>
-<li><a href="/data/Logic_design/logicdesign.pdf">Datasheet</a></li>
+<li><a href="/data/Logic_design/logicdesign.pdf">產品規格書</a></li>
 <li><a href="/data/Logic_design/logicdesign_wiring.pdf">接線範例</a></li>
 </ul>
 </section>
 <section id="section-2">
 <h2>連結</h2>
 <ul>
-<li><a href="https://www.tindie.com/products/light655/pmod-16mb-flash-module/">Purchase on Tindie</a></li>
+<li><a href="https://www.ruten.com.tw/item/22630185224904/">露天賣場購買連結</a></li>
 </ul>
 </section>
 <!-- /content -->
       <footer>
-        <p>Posted by <a href="/author/ying-chun-lin.html">Ying-Chun Lin</a> on <time datetime="2026-07-23T00:00:00+08:00">Thu 23 July 2026</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-07-23T00:00:00+08:00">Thu 23 July 2026</time></span> Tags: <a href="/tag/logic-design.html">Logic design</a>, <a href="/tag/electrical-engineering.html">Electrical Engineering</a>, <a href="/tag/logic-gates.html">Logic gates</a>, <a href="/tag/mosfet.html">MOSFET</a>.</p>
+        <p>Posted by <a href="/author/ying-chun-lin.html">Ying-Chun Lin</a> on <time datetime="2026-07-23T00:00:00+08:00">Thu 23 July 2026</time> in <a href="/Product/">Product</a>. <span class="m-label m-success">updated <time datetime="2026-07-25T00:00:00+08:00">Sat 25 July 2026</time></span> Tags: <a href="/tag/logic-design.html">Logic design</a>, <a href="/tag/electrical-engineering.html">Electrical Engineering</a>, <a href="/tag/logic-gates.html">Logic gates</a>, <a href="/tag/mosfet.html">MOSFET</a>.</p>
       </footer>
     </article>
 <!--     <nav class="m-navpanel m-col-m-2">
